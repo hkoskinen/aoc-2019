@@ -1,12 +1,8 @@
 import math
 
-def module_fuel(mass):
-  module_fuel_total = 0
-  while math.floor(int(mass) / 3) - 2 > 0:
-    mass = math.floor(int(mass) / 3) - 2
-    module_fuel_total += mass
-
-  return module_fuel_total
+def calc_module_fuel(mass):
+  mass = math.floor(int(mass) / 3) - 2
+  return 0 if mass < 1 else mass + calc_module_fuel(mass)
 
 def main():
   path = 'input.txt'
@@ -16,7 +12,7 @@ def main():
 
     total_fuel_required = 0
     while mass:
-      total_fuel_required += module_fuel(mass)
+      total_fuel_required += calc_module_fuel(mass)
       mass = f.readline()
 
     print('Day 1 part 2 puzzle answer is:', total_fuel_required)
