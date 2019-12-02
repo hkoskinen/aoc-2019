@@ -4,7 +4,7 @@ My solutions for [Advent of Code 2019](https://adventofcode.com/2019). Written i
 
 ## Completion Status ##
 
-2 out of 50 🌟 gathered!
+3 out of 50 🌟 gathered!
 
 ### Disclaimer ###
 
